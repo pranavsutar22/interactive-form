@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Assignment3.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="row mb-3">
+
+                <div class="col-12 col-md-6">
+                    <label for="fullname" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" name="fullname" required>
+                    <div id="nameError" class="text-danger" style="display:none;"></div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-12 col-md-6">
+                    <label for="aadhar" class="form-label">Aadhar Number</label>
+                    <input type="text" class="form-control" id="aadhar" name="aadhar" required>
+                    <div id="aadharError" class="text-danger" style="display:none;"></div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                    <label for="pan" class="form-label">PAN Card Number</label>
+                    <input type="text" class="form-control" id="pan" name="pan" required>
+                    <div id="panError" class="text-danger" style="display:none;"></div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-12 col-md-6">
+                    <label for="mobile" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobile" name="mobile" required>
+                    <div id="mobileError" class="text-danger" style="display:none;"></div>
+                </div>
+
+
+                <div class="col-12 col-md-6">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
+                    <div id="dobError" class="text-danger" style="display:none;"></div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-12">
+                    <label for="marks" class="form-label">Marks (Out of 100) for 6 Subjects</label>
+                    <div id="marksContainer">
+                        <input type="number" class="form-control mb-2" id="subject1" name="subject1" required>
+                        <input type="number" class="form-control mb-2" id="subject2" name="subject2" required>
+                        <input type="number" class="form-control mb-2" id="subject3" name="subject3" required>
+                        <input type="number" class="form-control mb-2" id="subject4" name="subject4" required>
+                        <input type="number" class="form-control mb-2" id="subject5" name="subject5" required>
+                        <input type="number" class="form-control mb-2" id="subject6" name="subject6" required>
+                    </div>
+                    <div id="marksError" class="text-danger" style="display:none;"></div>
+                    <button type="button" class="btn btn-primary mt-2" onclick="calculatePercentage()">Calculate Best of Five Percentage</button>
+                    <div id="percentageResult" class="mt-2"></div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="Assignment3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
